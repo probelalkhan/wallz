@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Wallz</string>
+    <string name="home">Home</string>
+    <string name="categories">Categories</string>
+    <string name="offline">Offline</string>
+    <string name="notification_channel_name">WallzApp</string>
+    <string name="channel_description">Wallz App Notifications</string>
+    <string name="notification_channel_description">Wallz App Notifications</string>
+    <string name="notification_title">Downloading Wallpaper</string>
+    <string name="notification_message">Wallpaper will be saved on your device</string>
+    <string name="something_went_wrong">Something Went Wrong</string>
+    <string name="try_again">Try Again</string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#1C1C25</color>
+    <color name="purple_700">#1C1C25</color>
+    <color name="teal_200">#353535</color>
+    <color name="teal_700">#434343</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="theme_color">#1C1C25</color>
+    <color name="bottom_nav_background">#1C1C25</color>
+    <color name="bottom_nav_icon">#EDEDED</color>
+    <color name="bottom_nav_text">#EDEDED</color>
+    <color name="bg_viewer">#B325233E</color>
+
+</resources>

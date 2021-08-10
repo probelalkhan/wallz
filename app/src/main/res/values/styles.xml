@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="FullWidthDialogStyle" parent="Base.Theme.AppCompat.Dialog">
+        <item name="android:windowMinWidthMajor">100%</item>
+        <item name="android:windowMinWidthMinor">100%</item>
+        <item name="android:windowAnimationStyle">@style/PhotoViewerAnimation.Window</item>
+    </style>
+
+    <style name="PhotoViewerAnimation.Window" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/dialog_anime_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_anime_out</item>
+    </style>
+
+</resources>
