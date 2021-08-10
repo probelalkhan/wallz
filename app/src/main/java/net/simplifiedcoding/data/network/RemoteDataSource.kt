@@ -11,7 +11,7 @@ import javax.inject.Inject
 class RemoteDataSource @Inject constructor() {
 
     companion object {
-        private const val ACCESS_KEY = "YOUR_ACCESS_KEY_HERE"
+        private const val ACCESS_KEY = "CKaeM_Tb9vOuqy8MHgtQo3VziZDQcIz7axN29P3eye8"
         private const val BASE_URL = "https://api.unsplash.com/"
     }
 

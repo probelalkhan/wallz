@@ -100,3 +100,5 @@ lint/tmp/
 
 # Android Profiling
 *.hprof
+
+/app/src/main/java/net/simplifiedcoding/data/network/RemoteDataSource.kt
