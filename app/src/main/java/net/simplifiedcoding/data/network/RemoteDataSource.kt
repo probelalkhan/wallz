@@ -10,6 +10,10 @@ import javax.inject.Inject
 
 class RemoteDataSource @Inject constructor() {
 
+    companion object {
+        private const val BASE_URL = "https://api.unsplash.com/"
+    }
+
     fun <Api> buildApi(
         api: Class<Api>
     ): Api {
