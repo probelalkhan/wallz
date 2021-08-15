@@ -8,7 +8,8 @@ sealed class Resource<out T> {
     data class Failure(
         val isNetworkError: Boolean,
         val errorCode: Int?,
-        val errorBody: ResponseBody?
+        val errorBody: ResponseBody?,
+        val throwable: Throwable
     ) : Resource<Nothing>()
 
     object Loading : Resource<Nothing>()

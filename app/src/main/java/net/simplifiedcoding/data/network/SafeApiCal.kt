@@ -14,10 +14,10 @@ interface SafeApiCall {
             } catch (throwable: Throwable) {
                 when (throwable) {
                     is HttpException -> {
-                        Resource.Failure(false, throwable.code(), throwable.response()?.errorBody())
+                        Resource.Failure(false, throwable.code(), throwable.response()?.errorBody(), throwable)
                     }
                     else -> {
-                        Resource.Failure(true, null, null)
+                        Resource.Failure(true, null, null, throwable)
                     }
                 }
             }
