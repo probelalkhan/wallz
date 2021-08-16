@@ -102,3 +102,4 @@ lint/tmp/
 *.hprof
 
 /app/src/main/java/net/simplifiedcoding/data/network/RemoteDataSource.kt
+/app/src/main/java/net/simplifiedcoding/data/network/Constants.kt

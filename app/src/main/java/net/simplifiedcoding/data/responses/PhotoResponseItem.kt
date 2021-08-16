@@ -1,6 +1,6 @@
 package net.simplifiedcoding.data.responses
 
-data class RandomPhotosResponseItem(
+data class PhotoResponseItem(
     val alt_description: String,
     val blur_hash: String,
     val categories: List<Any>,

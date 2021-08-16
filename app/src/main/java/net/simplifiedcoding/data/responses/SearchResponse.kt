@@ -1,4 +1,7 @@
 package net.simplifiedcoding.data.responses
 
-class SearchResponse {
-}
+data class SearchResponse(
+    val total: Int,
+    val total_pages: Int,
+    val results: List<PhotoResponseItem>
+)

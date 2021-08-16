@@ -17,17 +17,17 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun provideWallzDatabase(
-        @ApplicationContext context: Context
-    ): WallzDatabase {
-        return WallzDatabase(context)
-    }
-
-    @Singleton
-    @Provides
     fun provideWallzApi(
         remoteDataSource: RemoteDataSource
     ): WallzApi {
         return remoteDataSource.buildApi(WallzApi::class.java)
+    }
+
+    @Singleton
+    @Provides
+    fun provideWallzDb(
+        @ApplicationContext context: Context
+    ): WallzDatabase {
+        return WallzDatabase(context)
     }
 }

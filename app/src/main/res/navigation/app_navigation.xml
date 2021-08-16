@@ -7,14 +7,22 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="net.simplifiedcoding.ui.home.HomeFragment"
-        android:label="HomeFragment" />
+        android:label="Home" />
     <fragment
         android:id="@+id/categoriesFragment"
         android:name="net.simplifiedcoding.ui.category.CategoryFragment"
-        android:label="CategoryFragment" />
+        android:label="Categories" />
     <fragment
         android:id="@+id/offlineFragment"
         android:name="net.simplifiedcoding.ui.offline.OfflineFragment"
-        android:label="OfflineFragment" />
+        android:label="Offline" />
+    <fragment
+        android:id="@+id/commonErrorFragment"
+        android:name="net.simplifiedcoding.ui.commons.CommonErrorFragment"
+        android:label="Error" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="net.simplifiedcoding.ui.category.search.SearchFragment"
+        android:label="Search" />
 
 </navigation>

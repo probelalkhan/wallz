@@ -1,7 +1,6 @@
 package net.simplifiedcoding.ui.home
 
 import android.os.Bundle
-import android.provider.DocumentsContract.Document.COLUMN_SIZE
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -16,13 +15,16 @@ import net.simplifiedcoding.ui.commons.launchAndRepeatWithViewLifecycle
 import net.simplifiedcoding.ui.commons.set
 import net.simplifiedcoding.ui.commons.setVisible
 import net.simplifiedcoding.utils.GRID_COLUMN_SIZE
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private lateinit var binding: FragmentHomeBinding
     private val viewModel by viewModels<HomeViewModel>()
-    private val adapter = HomeRecyclerViewAdapter()
+
+    @Inject
+    lateinit var adapter: HomeRecyclerViewAdapter
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

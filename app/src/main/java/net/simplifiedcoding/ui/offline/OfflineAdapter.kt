@@ -3,12 +3,13 @@ package net.simplifiedcoding.ui.offline
 import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import net.simplifiedcoding.data.db.OfflinePhoto
 import net.simplifiedcoding.databinding.ItemPhotoBinding
 import net.simplifiedcoding.ui.commons.BaseRecyclerViewAdapter
-import java.io.File
+import javax.inject.Inject
 
-class OfflineAdapter :
-    BaseRecyclerViewAdapter<String, ItemPhotoBinding>() {
+class OfflineAdapter @Inject constructor() :
+    BaseRecyclerViewAdapter<OfflinePhoto, ItemPhotoBinding>() {
 
     override fun getItemLayout(parent: ViewGroup) = ItemPhotoBinding.inflate(
         LayoutInflater.from(parent.context),
@@ -20,11 +21,8 @@ class OfflineAdapter :
         holder: Companion.BaseViewHolder<ItemPhotoBinding>,
         position: Int
     ) {
-        holder.binding.imageView.setImageURI(items[position].getLocalUriForImage())
-    }
-
-    private fun String.getLocalUriForImage(): Uri {
-        return Uri.fromFile(File(this))
+        super.onBindViewHolder(holder, position)
+        holder.binding.imageView.setImageURI(Uri.parse(items[position].uri))
     }
 
 }

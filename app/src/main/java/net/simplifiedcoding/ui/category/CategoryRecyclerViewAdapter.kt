@@ -1,25 +1,29 @@
-package net.simplifiedcoding.ui.home
+package net.simplifiedcoding.ui.category
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import net.simplifiedcoding.data.responses.RandomPhotosResponseItem
-import net.simplifiedcoding.databinding.ItemPhotoBinding
+import net.simplifiedcoding.data.Category
+import net.simplifiedcoding.databinding.ItemCategoryBinding
 import net.simplifiedcoding.ui.commons.BaseRecyclerViewAdapter
+import net.simplifiedcoding.utils.getBitmapFromAsset
+import javax.inject.Inject
 
-class HomeRecyclerViewAdapter :
-    BaseRecyclerViewAdapter<RandomPhotosResponseItem, ItemPhotoBinding>() {
+class CategoryRecyclerViewAdapter @Inject constructor() :
+    BaseRecyclerViewAdapter<Category, ItemCategoryBinding>() {
 
-    override fun getItemLayout(parent: ViewGroup) = ItemPhotoBinding.inflate(
+    override fun getItemLayout(parent: ViewGroup) = ItemCategoryBinding.inflate(
         LayoutInflater.from(parent.context),
         parent,
         false
     )
 
     override fun onBindViewHolder(
-        holder: Companion.BaseViewHolder<ItemPhotoBinding>,
+        holder: Companion.BaseViewHolder<ItemCategoryBinding>,
         position: Int
     ) {
-        holder.binding.imageView.setImageURI(items[position].urls.regular)
-        holder.binding.root.setOnClickListener { itemClickListener?.invoke(it, items[position], position)}
+        super.onBindViewHolder(holder, position)
+        val bitmap = holder.binding.root.context.getBitmapFromAsset(items[position].assetName)
+        holder.binding.imageView.setImageBitmap(bitmap)
+        holder.binding.textViewCategoryName.text = items[position].name
     }
 }

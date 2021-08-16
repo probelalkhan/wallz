@@ -10,4 +10,7 @@
     <string name="notification_message">Wallpaper will be saved on your device</string>
     <string name="something_went_wrong">Something Went Wrong</string>
     <string name="try_again">Try Again</string>
+    <string name="exit">Exit</string>
+    <string name="make_sure_you_have_an_active_internet_connection">Make sure you have an active internet connection</string>
+    <string name="search_photo">Search Photo</string>
 </resources>

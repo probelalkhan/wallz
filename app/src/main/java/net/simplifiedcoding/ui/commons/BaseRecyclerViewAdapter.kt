@@ -22,6 +22,12 @@ abstract class BaseRecyclerViewAdapter<T : Any, VB : ViewBinding>
         return BaseViewHolder(getItemLayout(parent))
     }
 
+    override fun onBindViewHolder(holder: BaseViewHolder<VB>, position: Int) {
+        holder.binding.root.setOnClickListener {
+            itemClickListener?.invoke(it, items[position], position)
+        }
+    }
+
     companion object {
         class BaseViewHolder<VB : ViewBinding>(val binding: VB) :
             RecyclerView.ViewHolder(binding.root)
